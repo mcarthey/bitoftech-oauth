@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{71710A9C
 		Notes.txt = Notes.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSAuthentication.Web", "AngularJSAuthentication.Web\AngularJSAuthentication.Web.csproj", "{B8D7B23E-3E1C-4BB2-A253-AF53B96D2537}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{685501D2-6DF9-4E7E-B4A5-167F1912DAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{685501D2-6DF9-4E7E-B4A5-167F1912DAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{685501D2-6DF9-4E7E-B4A5-167F1912DAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D7B23E-3E1C-4BB2-A253-AF53B96D2537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D7B23E-3E1C-4BB2-A253-AF53B96D2537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D7B23E-3E1C-4BB2-A253-AF53B96D2537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D7B23E-3E1C-4BB2-A253-AF53B96D2537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -53,3 +53,15 @@ If all is successful you will receive a 200 response to /api/orders and the list
 
 # Enabling Cross-Origin Requests (CORS) in ASP.NET Web API 2
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
+
+
+# Setting up for AngularJS
+
+	Step 1: Download Third Party Libraries
+
+	To get started we need to download all libraries needed in our application:
+
+	AngularJS: We’ll serve AngularJS from from CDN, the version is 1.2.16
+	Loading Bar: We’ll use the loading bar as UI indication for every XHR request the application will made, to get this plugin we need to download it from here.
+	UI Bootstrap theme: to style our application, we need to download a free bootstrap ready made theme from http://bootswatch.com/ I’ve used a theme named “Yeti”.
+
