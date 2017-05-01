@@ -13,3 +13,11 @@ Needed NuGet packages to add support for registering and validating user credent
 Install-Package Microsoft.AspNet.Identity.Owin
 Install-Package Microsoft.AspNet.Identity.EntityFramework
 
+# Add authorization
+Install-Package Microsoft.Owin.Security.OAuth -Version 2.1.0
+After you install this package open file “Startup” again and call the new method named “ConfigureOAuth” as the first line inside the method “Configuration”
+
+# Allow CORS for ASP.NET Web API
+Install-Package Microsoft.Owin.Cors -Version 2.1.0
+
+
