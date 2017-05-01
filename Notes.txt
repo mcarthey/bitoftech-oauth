@@ -1,0 +1,15 @@
+From http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/
+
+Install-Package Microsoft.AspNet.WebApi.Owin
+Install-Package Microsoft.Owin.Host.SystemWeb
+The  package “Microsoft.Owin.Host.SystemWeb” is used to enable our Owin server to run our API on IIS using ASP.NET request pipeline as eventually we’ll host this API on Microsoft Azure Websites which uses IIS.
+
+1. Added Startup.cs
+2. Added lines to WebApiConfig.cs
+3. Removed Global.asax 
+4. Add the Identity System
+
+Needed NuGet packages to add support for registering and validating user credentials
+Install-Package Microsoft.AspNet.Identity.Owin
+Install-Package Microsoft.AspNet.Identity.EntityFramework
+
