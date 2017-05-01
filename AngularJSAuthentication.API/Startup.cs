@@ -23,6 +23,7 @@ namespace AngularJSAuthentication.API
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
             // Allow CORS for ASP.NET Web API
+            // Adds a CORS middleware to your web application pipeline to allow cross domain requests.
             app.UseCors(CorsOptions.AllowAll);
             // wire up ASP.NET Web API to Owin server pipeline
             app.UseWebApi(config);
@@ -30,7 +31,7 @@ namespace AngularJSAuthentication.API
 
         public void ConfigureOAuth(IAppBuilder app)
         {
-            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),

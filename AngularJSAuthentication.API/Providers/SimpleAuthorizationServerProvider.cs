@@ -46,7 +46,19 @@ namespace AngularJSAuthentication.API.Providers
             }
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+            // JWT Claims
+            // https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-token-and-claims
+            // sub
+            // Subject Identifies the principal about which the token asserts information, such as the user of an application. 
+            // This value is immutable and cannot be reassigned or reused, so it can be used to perform authorization checks safely.
+            // Because the subject is always present in the tokens the Azure AD issues, we recommended using this value in a 
+            // general purpose authorization system.
             identity.AddClaim(new Claim("sub", context.UserName));
+            // roles
+            // Represents all application roles that the subject has been granted both directly and indirectly through group membership 
+            // and can be used to enforce role-based access control. Application roles are defined on a per - application basis, 
+            // through the appRoles property of the application manifest. The value property of each application role is the value that 
+            // appears in the roles claim.
             identity.AddClaim(new Claim("role", "user"));
 
             // generate the token behind the scenes

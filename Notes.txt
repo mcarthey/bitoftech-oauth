@@ -20,4 +20,36 @@ After you install this package open file “Startup” again and call the new method
 # Allow CORS for ASP.NET Web API
 Install-Package Microsoft.Owin.Cors -Version 2.1.0
 
+# Issue HTTP requests to generate token for user
+Notice that the content-type and payload type is “x-www-form-urlencoded” so the payload body will be on form (grant_type=password&username=”Taiseer”&password=”SuperPass”). If all is correct you’ll notice that we’ve received signed token on the response.
 
+	# Example request
+	POST http://localhost:61365/token
+
+		Header
+			{"Content-Type":"application/x-www-form-urlencoded"}
+
+		Body
+			grant_type: password
+			username:MMc
+			password:MyPassword
+
+	# Example response
+	{
+	  "access_token": "8E8xiEY9PX5FGrEuZQf6vFdMqz-JQLEtCeVpKsIEzn03t5IcjzAHBnTqjglHeyKXUp4LKLJJUYDx6UpqRZxPob3Cr_LxdbEgkCuQHZlZpGdQRNYp0zPEjjuLoRV1gNt8SAb_39ncIxDUuKTUpZTu_dj79Awh2hpK_zb5ueIn4P4PJL_gk51_aXwfnX7OZHZtVZQ0C371Ol3vjZQ9xL2CSEtAezFCDpxPFOL97sy7jB0",
+	  "token_type": "bearer",
+	  "expires_in": 86399
+	}
+
+# Now we want to use this token to request the secure data using the end point /api/orders so we’ll issue GET request to the end point and will pass the bearer token in the Authorization header, so for any secure end point we’ve to pass this bearer token along with each request to authenticate the user.
+
+Otherwise we get Status 401 Unauthorized
+	{
+	  "message": "Authorization has been denied for this request."
+	}
+
+If all is successful you will receive a 200 response to /api/orders and the list of Orders will be returned
+
+
+# Enabling Cross-Origin Requests (CORS) in ASP.NET Web API 2
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
