@@ -65,3 +65,9 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross
 	Loading Bar: We’ll use the loading bar as UI indication for every XHR request the application will made, to get this plugin we need to download it from here.
 	UI Bootstrap theme: to style our application, we need to download a free bootstrap ready made theme from http://bootswatch.com/ I’ve used a theme named “Yeti”.
 
+# AngularJS tutorial
+
+Video: http://youtu.be/i9MHigUZKEM
+Tutorial: http://bitoftech.net/2014/01/13/tutorial-for-building-spa-using-angularjs-example/
+
+
